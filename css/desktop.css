@@ -62,12 +62,20 @@ fieldset {
   border: 0;
 }
 /* 레이아웃 가로 너비 설정 */
-.header, .main{
+.header{
   width: 1100px;
   margin: 0 auto;
 
 }
-
+.season-wrap {
+  position: relative;
+  background-color: #70c4d9;
+  background: url(/images/summer3_mv_bg.jpg) 0 0 / cover no-repeat;
+  padding-top: 70px;
+}
+.season-menu {
+  min-height: 650px;
+}
 /* 가로너비 100% 만들기 */
 .sub-menu-wrap {
   padding: 20px 0 20px 0;
@@ -269,22 +277,9 @@ background-color: rgba(0,0,0,0.8);
 .season-menu {
   width: 1100px;
   margin: 0 auto;
-  margin-top: 70px;
   position: relative;
 }
 
-.season-wrap {
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background-color: #70c4d9;
-  background: url(/images/summer3_mv_bg.jpg) 0 0 / cover no-repeat;
-  opacity: 0.5;
-}
-.season__list{
-  min-height: 500px;
-}
 
 .season__item:nth-child(1){
   width: 285px;
@@ -376,5 +371,58 @@ background-color: rgba(0,0,0,0.8);
   padding: 10px 30px;
 }
 /* 공지사항 및 프로모션 */  
+.board-wrap {
+  position: relative;
+}
 .board {
+  width: 1100px;
+  margin: 0 auto;
+}
+/* 스타벅스 리워즈 */
+.rewards-wrap {
+  position: relative;
+}
+.rewards {
+  width: 1100px;
+  margin: 0 auto;
+}
+/* 르완다 원두 */
+.bean-wrap {
+  position: relative;
+}
+.bean {
+  width: 1100px;
+  margin: 0 auto;
+}
+/* 리저브 원두 */
+.reserve-wrap {
+  position: relative;
+}
+.reserve {
+  width: 1100px;
+  margin: 0 auto;
+}
+/* 스타벅스 다양한 메뉴 */
+.product-wrap {
+  position: relative;
+}
+.product {
+  width: 1100px;
+  margin: 0 auto;
+}
+/* 스타벅스 매거진 */
+.magazine-wrap {
+  position: relative;
+}
+.magazine {
+  width: 1100px;
+  margin: 0 auto;
+}
+/* 매장찾기 */
+.find-wrap {
+  position: relative;
+}
+.find {
+  width: 1100px;
+  margin: 0 auto;
 }
