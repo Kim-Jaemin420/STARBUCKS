@@ -47,8 +47,29 @@ dl, dd {
 /* header css */
 header {
   background-color: #f6f5ef;
+  position: relative;
 }
 /* 네비게이션 멤버링크 */
+.nav-member {
+  /* float 방법 질문 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* 위치가 급격하게 변하기 때문에 포지션 */
+}
+.member__list {
+  display: inline-block;
+}
 .member__item {
   display: inline-block;
+ 
+  background-color: lightpink;
+}
+.search-form {
+  background-color: lightgreen;
+  display: inline-block;
+}
+
+input {
+  width: 150px;
 }
