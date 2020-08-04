@@ -25,6 +25,12 @@ body {
   clip: rect(0 0 0 0);
   clip: rect(0, 0, 0, 0);
 }
+/* clearfix */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
 /* header 초기화 */
 h1, h2, h3 {
   margin: 0;
@@ -40,36 +46,335 @@ a {
   text-decoration: none;
   color: inherit;
 }
+/* 버튼 초기화 */
+button {
+  border: 0;
+}
 /* dl, dd 초기화 */
 dl, dd {
   margin: 0;
+  padding: 0;
 }
-/* header css */
-header {
-  background-color: #f6f5ef;
+/* fieldset 초기화 */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* 레이아웃 가로 너비 설정 */
+.header, .main{
+  width: 1100px;
+  margin: 0 auto;
+
+}
+
+/* 가로너비 100% 만들기 */
+.sub-menu-wrap {
+  padding: 20px 0 20px 0;
+  
+}
+.main-wrap{
   position: relative;
+  width: 100%;
+}
+
+/* 컨텐츠 바로가기 */
+.skip{
+  text-align: center;
+  background-color: burlywood;
+  display: none;
+}
+/* 아이콘(이미지 설정) */
+.green-new::after {
+  content: "";
+  background-image: url(/images/icon_gnb_new.png);
+  display: inline-block;
+  margin-left: .1em;
+  width: 34px;
+  height: 15px;
+  vertical-align: baseline;
+}
+/* 윗첨자 줄이기 */
+.sub-menu__title .sup-size {
+  font-size: 3px;
+}
+/* header*/
+.header-container {
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  top:0;
+  left:0;
+  position: sticky;
+  background-color: #f6f5f0;
+  z-index:100;
+  max-height: 120px;
+}
+/* 헤더 로고 */
+.logo {
+  float: left;
+  margin-top: 20px;
 }
 /* 네비게이션 멤버링크 */
 .nav-member {
-  /* float 방법 질문 */
-  position: absolute;
-  top: 0;
-  right: 0;
-  /* 위치가 급격하게 변하기 때문에 포지션 */
+  float: right;
+  color: #333;
+  padding-right:30px;
 }
 .member__list {
   display: inline-block;
 }
 .member__item {
   display: inline-block;
- 
-  background-color: lightpink;
+  /* background-color: lightpink; */
+  line-height: 35px;
+  font-size: 1.3rem;
+  font-weight: 300;
 }
+.member__item > a[href="#"] {
+  padding: 10px;
+}
+.divider {
+  color: #ccc;
+}
+/* 네비게이션 검색폼 */
 .search-form {
-  background-color: lightgreen;
+  display: inline-block;
+  margin-right: 50px;
+  position: relative;
+  border-radius: 5px;
+  width: 180px;
+  border: 1px solid #ccc;
+  padding:3px 0 3px 10px;
+  background-color: #fff;
+  margin-bottom: 2px;
+  position:relative;
+
+  
+}
+.search-form__input{
+  width: 140px;
+  height: 22px;
+  border: 1px solid white;
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 5px;
+  /* padding-bottom: 2px; */
+}
+.search-form__btn{
+  background-color: transparent;
+  text-indent: 35px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 28px;
+  height: 30px;
+  position: absolute;
+  top:0;
+  right:0;
+  cursor:pointer;
+  color: #555;
+}
+.search-form__btn::after{
+  background: url(/images/icon_magnifier_black.png) no-repeat;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 4px;
+  right: -2px;
+  
+}
+/* 메인 메뉴 */
+.nav-menu {
+  float:right;
+  padding-right: 20px;
+}
+.sub-group1, .sub-group2,.sub-group3 ,.sub-group4, .sub-group5, .sub-group6 {
+  display:none;
+}
+.main-menu__item {
   display: inline-block;
 }
+.main-menu__button {
+  margin-top: 20px;
+  padding: 13px 20px 35px 20px;
+  cursor:pointer;
+  color: #333;
+  background-color: transparent;
+}
+/* 서브 메뉴 */
+.main-menu__button:hover {
+  color: #64a70b;
+  text-decoration: underline;
+background-color: rgba(0,0,0,0.8);
+}
+.sub-group {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 50px 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f6f5f0;
+}
 
-input {
-  width: 150px;
+.sub-menu-bg{
+  background-color: rgba(0,0,0,0.8);
+}
+.sub-menu-wrap,
+.menu-amp__list{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.sub-menu{
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+}
+.sub-menu:nth-child(n+6) {
+  margin-top: 30px;
+}
+.sub-menu__title {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.sub-menu__title a{
+  
+  vertical-align: top;
+}
+.sub-menu__item {
+  color: #999;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.menu-amp-bg {
+ background-image: url(/images/gnb_sub_txbg.jpg);
+}
+.menu-amp__list {
+  color: #999;
+  padding: 30px 30px 30px 0;
+
+  line-height: 1.3;
+  font-size: 1.4rem;
+}
+.menu-amp__brief {
+  color: #64a70b;
+  padding-bottom: 10px;
+}
+/* 여름 시즌 메뉴 */
+
+.season-menu {
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 70px;
+  position: relative;
+}
+
+.season-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #70c4d9;
+  background: url(/images/summer3_mv_bg.jpg) 0 0 / cover no-repeat;
+  opacity: 0.5;
+}
+.season__list{
+  min-height: 500px;
+}
+
+.season__item:nth-child(1){
+  width: 285px;
+  position: absolute;
+  top: 200px;
+  left: 350px;
+}
+.season__item:nth-child(2){
+  width: 170px;
+  position: absolute;
+  top: 0;
+  left: 600px;
+  z-index:10;
+}
+.season__item:nth-child(3){
+  width: 320px;
+  position: absolute;
+  top: 150px;
+  left: 750px;
+}
+.season__item:nth-child(1)::before{
+  content:"";
+  background:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/summer3_bev1_txt.png) 0 0/ cover no-repeat;
+  position:absolute;
+  width: 209px;
+  height: 56px;
+  bottom:30%;
+  left:-60%;
+}
+.season__item:nth-child(2)::before{
+  content:"";
+  background:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/summer3_bev2_txt.png);
+  position:absolute;
+  width: 213px;
+  height: 82px;
+  top:0;
+  left:-140%;
+
+}
+
+.season__item:nth-child(3)::before{
+  content:"";
+  background:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/summer3_bev3_txt.png);
+  position:absolute;
+  width: 217px;
+  height: 56px; 
+  bottom:-20%;
+  right: 0;
+}
+.season-md{
+  position: fixed;
+  margin-left: 485px;
+  top:138px;
+  left:55%;
+  width: 141px;
+  height: 252px;
+  z-index: 999;
+}
+
+.season-md a{
+  /* display: block; */
+  height: 100%;
+  width: 100%;
+}
+
+.link-box--ft-white{
+  color: #fff;
+}
+
+.link-box--white{
+  font-size: 1.7rem;
+  font-weight: 400;
+  display:inline-block;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  
+}
+.summer-more {
+  position: absolute;
+  top: 300px;
+  left: 0;
+}
+.summer-more__link:hover{
+  background-color: #00a252;
+  text-decoration: underline;
+}
+.summer-more__link{
+  display: block;
+  padding: 10px 30px;
+}
+/* 공지사항 및 프로모션 */  
+.board {
 }
