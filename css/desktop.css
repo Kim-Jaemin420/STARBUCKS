@@ -426,3 +426,11 @@ background-color: rgba(0,0,0,0.8);
   width: 1100px;
   margin: 0 auto;
 }
+/* 푸터 */
+.footer-wrap {
+  position: relative;
+}
+.footer {
+  width: 1100px;
+  margin: 0 auto;
+}
