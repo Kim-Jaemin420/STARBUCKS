@@ -344,48 +344,194 @@ background-color: rgba(0,0,0,0.8);
   height: 100%;
   width: 100%;
 }
-
+.link-box{
+  display: inline-block;
+  border: 2px solid;
+  font-weight: 400;
+  font-size: 1.7rem;
+  border-radius: 5px;
+}
+.link-box [class$="__link"]{
+  display:inline-block;
+  padding: 10px 30px;
+}
 .link-box--ft-white{
   color: #fff;
 }
 
 .link-box--white{
-  font-size: 1.7rem;
-  font-weight: 400;
-  display:inline-block;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  
+  border-color: #fff;
+}
+.link-box--ft-white [class$="__link"]:hover{
+  color:#000;
+}
+.link-box--bg-black [class$="__link"]{
+  background-color: #000;
+}
+.link-box--black{
+  border-color: #000;
+}
+.link-box [class$="__link"]:hover{
+  text-decoration: underline;
+}
+
+.hover--black [class$="__link"]:hover{
+  background-color:#000;
+}
+.hover--green [class$="__link"]:hover{
+  background-color: #00a252;
+}
+.hover--transparent [class$="__link"]:hover{
+  background-color:transparent;
 }
 .summer-more {
   position: absolute;
   top: 300px;
   left: 0;
 }
-.summer-more__link:hover{
-  background-color: #00a252;
-  text-decoration: underline;
-}
 .summer-more__link{
   display: block;
-  padding: 10px 30px;
 }
 /* 공지사항 및 프로모션 */  
 .board-wrap {
   position: relative;
+  background: linear-gradient(to right, 
+  #111 50%, #f6f5ef 50% 100%);
 }
 .board {
   width: 1100px;
   margin: 0 auto;
 }
+.notice {
+  color: #fff;
+  display: inline-block;
+  width: 630px;
+  padding :10px 0;
+  background-color: #111;
+  line-height: 36px;
+}
+
+.notice__title, .notice__list, .notice-more {
+ display: inline-block; 
+}
+.notice__title{
+  vertical-align: middle;
+}
+.notice__list{
+  vertical-align: middle;
+}
+.notice__link {
+  padding-right: 250px;
+}
+.notice__link:hover {
+  text-decoration: underline;
+}
+.notice-more{
+  width: 36px;
+  height: 36px;
+  float: right;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.notice-more__img {
+  width: 100%;
+  height: 100%;
+}
+.notice__title {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.notice__list li:nth-child(n+2) {
+  display: none;
+}
+/* 프로모션 포스터 */
+.promotion{
+  display:inline-block;
+  width: 450px;
+  color: #000;
+  background-color:#f6f5ef;
+  line-height: 35px;
+}
+.promotion__title, .notice__list, .promotion-more {
+  display: inline-block; 
+ }
+.promotion-expand {
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  float:right;
+}
+.promotion__title{
+  margin-left:200px;
+  vertical-align: middle;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.poster__title__link {
+  padding-right: 50px;
+}
+.poster__list  {
+  display: none;
+}
 /* 스타벅스 리워즈 */
 .rewards-wrap {
   position: relative;
+  background:  linear-gradient(to right, 
+  #272727 30%, #D5C798 30% 100%);
 }
+
 .rewards {
   width: 1100px;
-  margin: 0 auto;
+  min-height: 240px;
+  margin:0 auto;
+  position: relative;
 }
+
+.rewards__img {
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+.rewards::before {
+  content: "";
+  background: url(/images/reward_star_bg_m.png) right 0 / cover no-repeat ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  min-height: 240px;
+}
+.rewards::after {
+  content: "";
+  background: url(/images/reward_texbg.jpg) 0 0 / cover no-repeat;
+  display: block;
+  width: 100%;
+  min-height: 240px;
+}
+.rewards-member__brief, .rewards-gift__brief {
+  width: 450px;
+  white-space: pre;
+  margin-left: 300px;
+}
+.sign-up, .send-gift {
+  margin-left: 650px;
+  
+}
+.font-size {
+  font-size: 2rem;
+}
+.font-bold {
+  font-weight: 700;
+}
+.rewards-content{
+  position: absolute;
+  background-color: lightgreen;
+}
+
+
 /* 르완다 원두 */
 .bean-wrap {
   position: relative;
