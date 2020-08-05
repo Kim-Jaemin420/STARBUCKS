@@ -103,3 +103,15 @@ $(".main-menu__button6").mouseleave(function() {
 
   });
 });
+
+$(document).ready(function(){
+  $(".md-close").click(function(){
+    var state = $(".toggle").css('display');
+    if (state == 'none') {
+      $(".toggle").show();
+    }
+    else{
+      $('.toggle').hide();
+    }
+  })
+})

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./css/normalize.css" />
   <link rel="stylesheet" href="./css/desktop.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
   <title>Starbucks Coffee Korea</title>
   <script src="./jquery.min.js" defer></script>
   <script src="./menu-tab.js" defer></script>
@@ -511,7 +512,11 @@
           </div>
           <div class="season-md">
             <h3 class="a11y-hidden">여름 시즌 md</h3>
-            <a href="#"><img src="/images/20200714_badge_pc.png" alt="나만의 스타벅스 홈카페 자세히보기" /></a>
+            <a href="#" class="toggle">
+              <img src="/images/20200714_badge_pc.png" alt="나만의 스타벅스 홈카페 자세히보기" />
+              <button class="md-close">창닫기</button>
+            </a>
+            
           </div>
         </section>
       </div>
@@ -744,7 +749,7 @@
             </ul>
           </li>
           <li class="info">
-            <a class="info__head" href="#">RECRUT</a>
+            <a class="info__head" href="#">RECRIUT</a>
             <ul class="info__list">
               <li class="info__item"><a class="info__link" href="#">채용소개</a></li>
               <li class="info__item"><a class="info__link" href="#">채용 지원하기</a></li>
