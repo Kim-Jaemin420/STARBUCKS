@@ -1058,11 +1058,7 @@ body {
   margin-top: 30px;
 }
 .company-info__list {
-  font-size: 1.3rem;
-  border: 1px solid #fff;
-  padding: 10px 20px;
   margin: 0 0 20px 10px;
-  border-radius: 3px;
 }
 .info__link {
   padding: 10px 20px;
