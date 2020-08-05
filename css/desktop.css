@@ -38,7 +38,7 @@ h1, h2, h3 {
 /*ul 초기화 */
 ul {
   margin: 0;
-  padding-left: 0;
+  padding: 0;
   list-style: none;
 }
 /* 앵커 태그 초기화 */
@@ -60,6 +60,13 @@ fieldset {
   margin: 0;
   padding: 0;
   border: 0;
+}
+/* figure 초기화 */
+figure {
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
 }
 /* 레이아웃 가로 너비 설정 */
 .header{
@@ -150,34 +157,32 @@ fieldset {
   margin-right: 50px;
   position: relative;
   border-radius: 5px;
-  width: 180px;
+  width: 33px;
   border: 1px solid #ccc;
-  padding:3px 0 3px 10px;
+  padding:5px 0 5px 2px;
   background-color: #fff;
   margin-bottom: 2px;
   position:relative;
-
-  
+  transition: all 500ms;  
 }
 .search-form__input{
-  width: 140px;
+  width: 80%;
   height: 22px;
-  border: 1px solid white;
   font-size: 1.2rem;
   border: 0;
   border-radius: 5px;
-  /* padding-bottom: 2px; */
 }
 .search-form__btn{
-  background-color: transparent;
+  background-color: #fff;
+  border-radius: 5px;
   text-indent: 35px;
   overflow: hidden;
   white-space: nowrap;
   width: 28px;
-  height: 30px;
+  height: 28px;
   position: absolute;
-  top:0;
-  right:0;
+  top:2px;
+  right:1px;
   cursor:pointer;
   color: #555;
 }
@@ -187,9 +192,8 @@ fieldset {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 4px;
-  right: -2px;
-  
+  top: 5px;
+  right: -3px;
 }
 /* 메인 메뉴 */
 .nav-menu {
@@ -214,10 +218,10 @@ fieldset {
 }
 .sub-group{
   
-  
-  height: 0;
-  overflow: hidden;
-  transition: all .5s ease-out;
+  /* opacity: 0;
+  transition: all .5s ease-out; */
+  display: none;
+
   position: absolute;
   left: 0;
   right: 0;
@@ -226,9 +230,10 @@ fieldset {
   margin: 0 auto;
   background-color: #f6f5f0;
 }
+
+
 .menu-act .sub-group{
-  display: block;
-  height: auto;
+  
 }
 .sub-menu-bg{
   background-color: rgba(0,0,0,0.8);
@@ -345,57 +350,197 @@ fieldset {
 }
 
 .season-md a{
-  /* display: block; */
   height: 100%;
   width: 100%;
 }
+/* 앵커 박스 모듈화 */
 .link-box{
+  width: 125px;
+  height: 35px;
   display: inline-block;
+  font-size: 14px;
+  height: 100%;
+  line-height: 34px;
+  text-align: center;
   border: 2px solid;
-  font-weight: 400;
-  font-size: 1.7rem;
-  border-radius: 5px;
+  border-radius: 3px;
 }
-.link-box [class$="__link"]{
-  display:inline-block;
-  padding: 10px 30px;
+.footer-box {
+  width: 115px;
+  height: 35px;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  margin: 10px 2px 0 3px;
+  line-height: 30px;
 }
-.link-box--ft-white{
+.font--white{
   color: #fff;
 }
-
-.link-box--white{
+.border--white{
   border-color: #fff;
 }
-.link-box--ft-white [class$="__link"]:hover{
-  color:#000;
-}
-.link-box--bg-black [class$="__link"]{
-  background-color: #000;
-}
-.link-box--black{
+.border--black{
   border-color: #000;
 }
-.link-box [class$="__link"]:hover{
-  text-decoration: underline;
+.bg--black {
+  background-color: #000;
 }
 
-.hover--black [class$="__link"]:hover{
-  background-color:#000;
-}
-.hover--green [class$="__link"]:hover{
-  background-color: #00a252;
-}
-.hover--transparent [class$="__link"]:hover{
-  background-color:transparent;
-}
+/* 서머 모어 */
 .summer-more {
-  position: absolute;
-  top: 300px;
-  left: 0;
+  margin-top: 40px;
 }
 .summer-more__link{
   display: block;
+}
+/* hover 했을때 바뀌는 특 */
+.summer-more__link:hover {
+  background-color: #00a252;
+  color: #fff;
+  text-decoration: underline;
+}
+.sign-up:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+.login:hover {
+  background-color: #000;
+  text-decoration: underline;
+  color: #fff;
+}
+.send-gift:hover {
+  background-color: #000;
+  text-decoration: underline;
+  color: #fff;
+}
+.bean-more:hover {
+  background-color: #fff;
+  text-decoration: underline;
+  color: #000;
+}
+.reserve-more:hover {
+  background-color: #000;
+  text-decoration: underline;
+  color: #fff;
+}
+.product-more:hover {
+  background-color: #fff;
+  text-decoration: underline;
+  color: #000;
+}
+.find-market:hover {
+  background-color: #000;
+  text-decoration: underline;
+  color: #fff;
+}
+.footer-box:hover {
+  text-decoration: underline;
+}
+.send-gift {
+  width: 255px;
+  height: 35px;
+}
+@keyframes bgAni1{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+@keyframes bgAni2{
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+@keyframes bgAni3{
+  0%{
+    opacity:0;
+  }
+  33%{
+    opacity:0;
+  }
+  66%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+@keyframes bgAni4{
+  0%{
+    opacity:0;
+  }
+  25%{
+    opacity:0;
+  }
+  50%{
+    opacity:0;
+  }
+  75%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+@keyframes bgAni5{
+  0%{
+    opacity:0;
+  }
+  20%{
+    opacity:0;
+  }
+  40%{
+    opacity:0;
+  }
+  60%{
+    opacity:0;
+  }
+  80%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+.slogan{
+  animation: bgAni4 2000ms ease-in;
+}
+.summer-more{
+  animation: bgAni5 2500ms ease-in;
+}
+.season__item:nth-child(1){
+  animation: bgAni2 1000ms ease-in;
+  width: 285px;
+  position: absolute;
+  top: 200px;
+  left: 350px;
+}
+.season__item:nth-child(2){
+  animation: bgAni1 500ms ease-in;
+  width: 170px;
+  position: absolute;
+  top: 0;
+  left: 600px;
+  z-index:10;
+}
+.season__item:nth-child(3){
+  animation: bgAni3 1500ms ease-in;
+  width: 320px;
+  position: absolute;
+  top: 150px;
+  left: 750px;
 }
 /* 공지사항 및 프로모션 */  
 .board-wrap {
@@ -485,16 +630,14 @@ fieldset {
 .rewards-wrap {
   position: relative;
   background:  linear-gradient(to right, 
-  #272727 30%, #D5C798 30% 100%);
+  #272727 50%, #D5C798 50% 100%);
 }
-
 .rewards {
   width: 1100px;
-  min-height: 240px;
+  min-height: 260px;
   margin:0 auto;
   position: relative;
 }
-
 .rewards__img {
   position: absolute;
   top: 40%;
@@ -505,62 +648,205 @@ fieldset {
   background: url(/images/reward_star_bg_m.png) right 0 / cover no-repeat ;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -50px;
   width: 350px;
-  min-height: 240px;
+  min-height: 260px;
 }
 .rewards::after {
   content: "";
   background: url(/images/reward_texbg.jpg) 0 0 / cover no-repeat;
   display: block;
   width: 100%;
-  min-height: 240px;
+  min-height: 260px;
 }
 .rewards-member__brief, .rewards-gift__brief {
   width: 450px;
   white-space: pre;
-  margin-left: 300px;
+  margin-left: 270px;
+  display:inline-block;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+.rewards-member__brief{
+  margin-top:10px;
+}
+.rewards-gift__brief{
+  margin-top:-20px;
 }
 .sign-up, .send-gift {
-  margin-left: 650px;
-  
+  /* display: inline-block; */
+  margin-left: 100px;
 }
-.font-size {
-  font-size: 2rem;
+.login, .sign-up{
+  vertical-align: top;
+  margin-top: 70px;
+}
+.ft--gray{
+  color: #777;
+}
+.rewards__em{
+  font-style:normal;
+  font-weight: 700;
+}
+.send-gift{
+  vertical-align: top;
+  margin-top: 10px;
+}
+.rewards .font-size-big{
+  font-size: 2.3rem;
+  line-height: 1.7;
+}
+.font-size-big {
+  font-size: 3rem;
 }
 .font-bold {
   font-weight: 700;
 }
 .rewards-content{
   position: absolute;
-  background-color: lightgreen;
+  top:0;
+  left: 0;
 }
-
-
 /* 르완다 원두 */
 .bean-wrap {
   position: relative;
+  background: url(/images/20_summer_rwanda_bg.jpg) right 0 / cover no-repeat;
 }
 .bean {
   width: 1100px;
   margin: 0 auto;
+  min-height: 570px;
+  position: relative;
+}
+.bean__figure {
+  position: absolute;
+  top: 75px;
+  left: 150px;
+}
+.bean-content {
+  padding-top: 175px;
+  padding-left: 430px;
+}
+.bean__brief {
+  width: 530px;
+  white-space: pre;
+  text-align: left;
+  display: block;
+}
+.bean-brief-text {
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1.3;
+}
+.bean-more {
+  margin-left: 65px;
+  display: inline-block;
+}
+
+.bean-font {
+  color: #accab9;
+  margin-left: .5em;
+}
+.bean__brief .font-size-big{
+  margin-left:0.3em;
 }
 /* 리저브 원두 */
 .reserve-wrap {
   position: relative;
+  min-height: 400px;
+  background: url(/images/summer2_reserve_bean.png) no-repeat right;
+  background-color: #C3D2D9;
 }
 .reserve {
-  width: 1100px;
+  width: 1330px;
+  min-height: 400px;
   margin: 0 auto;
+  background: url(/images/summer2_reserve_title.png) no-repeat;
+  background-position: left 80px;
+}
+.reserve__title {
+  min-height: 300px;
+}
+.reserve-more {
+  float: left;
+  margin-left: 180px;
+  margin-top: 280px;
+  margin-bottom: 20px;
+}
+.caution {
+  font-size: 1.3rem;
+  float: left;
+  width: 100%;
+  margin-left: 180px;
+  color: #7b7c7ac9;
+}
+.caution::before {
+  content: "";
+  display: inline-block;
+  border: 1px solid black;
+  background-color: #000;
+  width: 5px;
+  height: 5px;
+  margin-right: .5em;
+}
+.caution1 {
+  margin-bottom: 10px;
+}
+.caution2 {
+  margin-bottom: 20px;
 }
 /* 스타벅스 다양한 메뉴 */
 .product-wrap {
   position: relative;
+  background-color: #45434C;
+  background-image: url(/images/fav_prod_bg_new.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto 100%;
 }
 .product {
-  width: 1100px;
+  width: 1180px;
   margin: 0 auto;
+  min-height: 600px;
+  text-align: right;
 }
+
+.product-slogan {
+  color: #fff;
+  float: left;
+  width: 320px;
+  margin-right: 170px;
+  margin-top: 50px;
+  line-height: 1.4;
+}
+.product-text1 {
+  white-space: pre;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: right;
+}
+.product-text2 {
+  line-height: 1.3;
+  text-align:right;
+}
+.product-figure {
+  float: right;
+  width: 672px;
+}
+.product > :nth-child(3) {
+  font-size: 2.7rem;
+}
+.product__em {
+  font-style: normal;
+  font-weight: 700;
+}
+.product-more {
+  margin-left: -300px;
+  margin-top: 50px;
+  float: left;
+}
+
 /* 스타벅스 매거진 */
 .magazine-wrap {
   position: relative;
@@ -568,6 +854,73 @@ fieldset {
 .magazine {
   width: 1100px;
   margin: 0 auto;
+}
+.magazine-wrap {
+  background-color: #fff;
+  padding: 90px 0;
+  position: relative;
+  z-index: 0;
+}
+.magazine {
+  width: 1240px;
+  margin: 0 auto;
+  position: relative;
+  /* z-index:-5; */
+}
+.magazine::before{
+  content:"";
+  position:absolute;
+  width: 95.3%;
+  height:1px;
+  background-color: #CCCCCB;
+  top:61.8%;
+  left:9.5%;
+  z-index:-1;
+}
+.magazine::after{
+  content:"";
+  position:absolute;
+  width: 1px;
+  height:64%;
+  background-color: #CCCCCB;
+  top:136px;
+  left:44%;
+  z-index: -1;
+}
+.magazine__brief::before{
+  content:"";
+  display: inline-block;
+  background:
+  url(https://image.istarbucks.co.kr/upload/common/img/main/2020/reserve_visual_pc.png)
+  0 0/ cover no-repeat;
+  width: 470px;
+  height: 515px;
+  margin-left:30px;
+  vertical-align: middle;
+  /* z-index: 10; */
+}
+.magazine__brief::after{
+  content:"";
+  display:inline-block;
+  background: url(https://image.istarbucks.co.kr/upload/common/img/main/2020/reserve_text_pc.png)
+  0 0/ cover no-repeat;
+  width: 565px;
+  height: 83px;
+  margin-left: 80px;
+}
+.magazine__more{
+  position:absolute;
+  top: 65%;
+  right: 30%;
+  font-size: 2.0rem;
+  letter-spacing: 0.3rem;
+  word-spacing: 0.5rem;
+  font-weight: 400;
+  transition: all 400ms;
+}
+.magazine__more:hover{
+  color: #fff;
+  background-color: #946B38;
 }
 /* 매장찾기 */
 .find-wrap {
@@ -577,11 +930,159 @@ fieldset {
   width: 1100px;
   margin: 0 auto;
 }
+.find-wrap {
+  background: 
+  #E9E9E9
+  url(https://www.starbucks.co.kr/common/img/main/store_exp_img03.png)
+  no-repeat
+  50% -60px
+  ;
+}
+.find {
+  position:relative;
+  width: 1280px;
+  margin: 0 auto;
+  background:
+  url(https://www.starbucks.co.kr/common/img/main/store_exp_img04.png)
+  no-repeat
+  right bottom;
+  min-height: 400px;
+}
+.find::before{
+  content:"";
+  display: inline-block;
+  width: 366px;
+  height: 312px;
+  background:
+  url(https://www.starbucks.co.kr/common/img/main/store_exp_img02.png)
+  no-repeat
+  0 0;
+  margin-left: 100px;
+}
+.find::after{
+  content:"";
+  position:absolute;
+  top:150px;
+  left:228px;
+  width: 228px;
+  height: 228px;
+  background:
+  url(https://www.starbucks.co.kr/common/img/main/store_exp_img01.png)
+  no-repeat
+  0 0;
+  margin-left: 100px;
+}
+.find__brief{
+  display: inline-block;
+  white-space: pre;
+  vertical-align: top;
+  margin-top:50px;
+  margin-left: 70px;
+  padding-left: 140px;
+  line-height: 1.5;
+}
+.find__brief .bolder{
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.middle-size{
+  font-weight: 400;
+  font-size: 1.8rem;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+.find .find__brief .sup-size{
+  line-height: 0.5;
+  font-size: 0.5rem;
+}
+.find__brief .em{
+  font-style: normal;
+  font-weight: 700;
+}
+.find-market{
+  /* position: absolute;
+  left: 720px;
+  top : 230px; */
+  margin-left: -390px;
+  margin-top: -100px;
+  background-color: transparent;
+}
 /* 푸터 */
 .footer-wrap {
   position: relative;
 }
 .footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #2C2A29;
+  color: #E8E8E8;
+}
+.footer-inner {
   width: 1100px;
   margin: 0 auto;
+}
+.info {
+  vertical-align: top;
+  display: inline-block;
+}
+.info-group {
+  min-height: 260px;
+  margin-top: 45px;
+}
+.info__list {
+  width: 216px;
+  height: auto;
+  margin-top: 20px;
+}
+.info__item {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.award__wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 260px;
+}
+
+.award-list {
+  min-height: 81px;
+  
+}
+.rule {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.company-info__list {
+  font-size: 1.3rem;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  margin: 0 0 20px 10px;
+  border-radius: 3px;
+}
+.info__link {
+  padding: 10px 20px;
+}
+.rule__green {
+  color: #00B050 !important;
+}
+.company__addr {
+  margin-bottom: 10px;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.award-list,
+.rule,
+.company-info,
+.company {
+  text-align: center;
+}
+.company-info__list,
+.rule li {
+  display: inline-block;
 }
