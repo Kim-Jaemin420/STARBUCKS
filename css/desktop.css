@@ -196,9 +196,6 @@ fieldset {
   float:right;
   padding-right: 20px;
 }
-.sub-group1, .sub-group2,.sub-group3 ,.sub-group4, .sub-group5, .sub-group6 {
-  display:none;
-}
 .main-menu__item {
   display: inline-block;
 }
@@ -210,12 +207,17 @@ fieldset {
   background-color: transparent;
 }
 /* 서브 메뉴 */
-.main-menu__button:hover {
+.menu-act .main-menu__button{
   color: #64a70b;
   text-decoration: underline;
-background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.8);
 }
-.sub-group {
+.sub-group{
+  
+  
+  height: 0;
+  overflow: hidden;
+  transition: all .5s ease-out;
   position: absolute;
   left: 0;
   right: 0;
@@ -224,7 +226,10 @@ background-color: rgba(0,0,0,0.8);
   margin: 0 auto;
   background-color: #f6f5f0;
 }
-
+.menu-act .sub-group{
+  display: block;
+  height: auto;
+}
 .sub-menu-bg{
   background-color: rgba(0,0,0,0.8);
 }
