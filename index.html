@@ -29,9 +29,9 @@
       <header class="header clearfix">
 
         <!-- 건너뛰기 링크 -->
-        <div class="skip tab">
+        <div class="skip">
           <ul>
-            <li><a href="#">메인 콘텐츠 바로가기</a></li>
+            <li><a href="index.html#main">메인 콘텐츠 바로가기</a></li>
           </ul>
         </div>
         <!-- 스타벅스 로고 -->
@@ -56,8 +56,7 @@
             <fieldset>
               <legend>검색 입력 폼</legend>
               <label class="a11y-hidden" for="search">검색어</label>
-              <input id="search-form__input" class="search-form__input" type="text" name="search" placeholder="통합검색"
-                id="search" />
+              <input id="search" class="search-form__input" type="text" name="search" placeholder="통합검색" />
               <button id="search-form__btn" class="search-form__btn">검색</button>
             </fieldset>
           </form>
@@ -489,14 +488,14 @@
     </div>
     <!--  class="main"메인 콘텐츠 -->
 
-    <main class="main">
+    <main  class="main">
 
       <!-- 시즌 메뉴 -->
 
       <div class="season-wrap">
         <section class="season-menu">
           <h2 tabindex="0" class="a11y-hidden">여름 시즌 메뉴</h2>
-          <div class="slogan">
+          <div  id="main"  class="slogan">
             <img src="/images/20_summer3_emblem.png" alt="STAY CHILL STAY PLAYFUL." />
           </div>
           <ul class="season__list">
@@ -521,11 +520,12 @@
           </div>
           <div class="season-md">
             <h3 tabindex="0" class="a11y-hidden">여름 시즌 md</h3>
-            <a href="#" class="toggle">
-              <img src="/images/20200714_badge_pc.png" alt="나만의 스타벅스 홈카페 자세히보기" />
-             <button tabindex="-1" class="md-close"><i class="far fa-times-circle"></i></button>
-            </a>
-            
+            <div class="toggle">
+              <a href="#">
+                <img src="/images/20200714_badge_pc.png" alt="나만의 스타벅스 홈카페 자세히보기" />
+              </a>
+              <button class="md-close" aria-label="나만의 홈카페 창닫기"><i class="far fa-times-circle"></i></button>
+            </div>
           </div>
         </section>
       </div>
@@ -673,12 +673,11 @@
               <em class="product__em">다양한 메뉴</em>를
               <em class="product__em">스타벅스</em>에서 즐겨보세요.
             </p>
-            <p class="prodspan>
+            <p class="prodspan">
               <span tabindex="0">스타벅스만의 특별함을 경험할 수 있는 <em class="product__em">최상의 선택음료</em></span>
               <span tabindex="0">스타벅스 커피와 완벽한 어울림을 <em class="product__em">자랑하는 푸드</em></span>
               <span tabindex="0">다양한 시도와 디자인으로 <em class="product__em">가치를 더하는 상품</em></span>
-              <span tabindex="0">소중한 사람에게 마음을 전하는 가장 좋은 방법 <em class="product__em">스타벅스 카드</span>
-              </em>
+              <span tabindex="0">소중한 사람에게 마음을 전하는 가장 좋은 방법 <em class="product__em">스타벅스 카드</em></span>
             </p>
           </div>
           <figure class="product__figure">
@@ -773,13 +772,6 @@
             <img class="award" src="/images/footer_award17_03.jpg" alt="온실가스 저감 우수 모범 기업" />
             <img class="award" src="/images/footer_award17_04.jpg" alt="농식품 상생협력 활동 우수 기업" />
             <img class="award" src="/images/footer_award17_05.jpg" alt="대한민국 여성인재경영대상 우수사례 기업" />
-            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
-            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
-            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
-            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
-            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
-            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
-            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
           </div>
         </div>
         <ul class="rule">

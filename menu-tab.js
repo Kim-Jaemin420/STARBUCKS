@@ -17,11 +17,11 @@ $(document).ready(function()
 });
 
 
-tab.click(function(e){
-  e.preventDefault();
-  panel.removeClass('tab-act')
-  $(this).parent().parent().addClass('tab-act')
-});
+// tab.click(function(e){
+//   e.preventDefault();
+//   panel.removeClass('tab-act')
+//   $(this).parent().parent().addClass('tab-act')
+// });
 
 // 검색 슬라이드
 $( document ).ready( function() {
@@ -115,6 +115,38 @@ $(document).ready(function(){
     }
   })
 })
-
-//건너뛰기 링크 탭인덱스
-tab.attr('tabindex', '0');
+//메인 메뉴 구현
+$(document).ready(function()
+{
+  btn.hover(function(e){
+    e.preventDefault();
+    items.removeClass('menu-act');
+    $(this).parent().removeClass('no-act');
+    $(this).parent().addClass('menu-block');
+    $(this).parent().addClass('slide-start');
+    $(this).parent().addClass('menu-act');
+  },function(){
+    $(this).parent().removeClass('menu-act');
+    $(this).parent().removeClass('slide-start');
+    $(this).parent().removeClass('menu-block');
+    $(this).parent().addClass('no-act');
+  });
+});
+$(document).ready(function()
+{
+  items.hover(function(e){
+    e.preventDefault();
+    items.removeClass('menu-hover');
+    $(this).addClass('menu-hover');
+  },function(){
+    $(this).removeClass('menu-hover');
+  });
+});
+$(document).ready(function()
+{
+  btn.on('click',function(e){
+    e.preventDefault();
+    items.removeClass('menu-act');
+    $(this).parent().addClass('menu-act');
+  });
+});

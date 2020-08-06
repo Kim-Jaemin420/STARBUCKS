@@ -1,4 +1,4 @@
-@import url(./normalize.css);
+@import url(/normalize.css);
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
@@ -68,6 +68,10 @@ figure {
 body {
   overflow-x: hidden;
 }
+/* 메인메뉴 버튼 링크 */
+.sub-menu__title > a:hover {
+  text-decoration: underline;
+}
 /* 모듈화 */
 [class $="__link"]:hover {
   text-decoration: underline;
@@ -108,8 +112,9 @@ body {
 }
 .season-wrap {
   position: relative;
-  background-color: #70c4d9;
-  background: url(/images/summer3_mv_bg.jpg) 0 0 / cover no-repeat;
+  background-color: #097FAF;
+  background: linear-gradient(180deg, #097FAF,#037FB0 );
+  /* background: url(/images/summer3_mv_bg.jpg) 0 0 / cover no-repeat; */
   padding-top: 70px;
 }
 .season-menu {
@@ -250,34 +255,38 @@ body {
 }
 
 /* 서브 메뉴 */
-.menu-act .main-menu__button{
-  color: #64a70b;
+.menu-act .main-menu__button,.menu-hover .main-menu__button{
+  color: #64A70B;
   text-decoration: underline;
   background-color: rgba(0,0,0,0.8);
 }
-
-
 .sub-group{
+  display: none;
   transition: all 100ms;
-  
-  /* display: none; */
   max-height: 0;
   overflow: hidden;
-  
   position: absolute;
   left: 0;
   right: 0;
   margin: 50px 0;
   width: 100%;
   margin: 0 auto;
-  background-color: #f6f5f0;
+  background-color: #F6F5F0;
 }
-
-
-.menu-act .sub-group{
-  /* display: block; */
-  max-height: 1100px;
-  transition: all 800ms ease-out; 
+.menu-act .sub-group,.menu-hover .sub-group{
+  display: block;
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: all 1s;
+}
+@keyframes slideIn {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1100px;
+  }
 }
 .sub-menu-bg{
   background-color: rgba(0,0,0,0.8);
@@ -400,11 +409,11 @@ body {
 .md-close {
   background: transparent;
   position: absolute;
-  top: 20px;
-  right: -5px;
+  top: 25px;
+  right: 20px;
 }
 .fa-times-circle {
-  color: #999;
+  color: #000;
 }
 /* 앵커 박스 모듈화 */
 .link-box{
@@ -451,6 +460,7 @@ body {
 /* 서머 모어 */
 .summer-more {
   margin-top: 40px;
+  font-weight: 900;
 }
 .summer-more__link{
   display: block;
@@ -701,7 +711,8 @@ body {
   margin-top: 70px;
 }
 .ft--gray{
-  color: #777;
+  color: #694D4C;
+  font-size: 1.5rem;
 }
 .rewards__em{
   font-style:normal;
@@ -746,6 +757,7 @@ body {
 .bean-content {
   padding-top: 175px;
   padding-left: 430px;
+  font-size: 1.5rem;
   animation: movecontent 2s ease-out;
 }
 .bean__brief {
@@ -815,7 +827,7 @@ body {
   float: left;
   width: 100%;
   margin-left: 180px;
-  color: #7b7c7ac9;
+  color: #515C5D;
 }
 .caution::before {
   content: "";
