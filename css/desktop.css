@@ -112,9 +112,9 @@ body {
 }
 .season-wrap {
   position: relative;
-  background-color: #097FAF;
-  background: linear-gradient(180deg, #097FAF,#037FB0 );
-  /* background: url(/images/summer3_mv_bg.jpg) 0 0 / cover no-repeat; */
+  /* background-color: #097FAF;
+  background: linear-gradient(180deg, #097FAF,#037FB0 ); */
+  background: url(/images/summer3_mv_bg.jpg) 0 0 / cover no-repeat;
   padding-top: 70px;
 }
 .season-menu {
