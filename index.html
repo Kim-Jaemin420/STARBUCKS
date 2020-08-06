@@ -4,10 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="블론드 서머 라떼 & 스위티 자몽, 라임 블렌디드,스위티 멜론 블렌디드"/>
+  <meta name="description" content="스타벅스 메인페이지 올 여름 시즌메뉴 블론드 서머 라떼 & 스위티 자몽, 라임 블렌디드,스위티 멜론 블렌디드를 즐겨보세요"/>
+  <meta property="og:title" content="STARBUCKS KOREA"/>
+  <meta property="og:url" content="https://www.starbucks.co.kr/index.do"/>
+  <meta property="og:description" content="스타벅스의 새로운 시즌메뉴들을 즐겨보세요"/>
+  <meta property="og:image" content="/images/logo.png"/>
+  <!-- <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" /> -->
   <link rel="stylesheet" href="./css/normalize.css" />
   <link rel="stylesheet" href="./css/desktop.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  
   <title>Starbucks Coffee Korea</title>
   <script src="./jquery.min.js" defer></script>
   <script src="./menu-tab.js" defer></script>
@@ -33,13 +42,13 @@
         <!-- navigation 고려 -->
         <nav class="nav-member">
           <ul class="member__list">
-            <li class="member__item"><a href="#" title="로그인">Sign In</a></li>
-            <li class="member__item"><span aria-hidden="true" class="divider">ㅣ</span><a href="#" title="마이 스타벅스">My
+            <li class="member__item"><a class="member__link" href="#" title="로그인">Sign In</a></li>
+            <li class="member__item"><span aria-hidden="true" class="divider">ㅣ</span><a class="member__link" href="#" title="마이 스타벅스">My
                 Starbucks</a></li>
-            <li class="member__item"><span aria-hidden="true" class="divider">ㅣ</span><a href="#"
+            <li class="member__item"><span aria-hidden="true" class="divider">ㅣ</span><a class="member__link" href="#"
                 title="고객 서비스">Customer
                 Service &amp; Ideas</a></li>
-            <li class="member__item"><span aria-hidden="true" class="divider">ㅣ</span><a href="#" title="매장 찾기">Find a
+            <li class="member__item"><span aria-hidden="true" class="divider">ㅣ</span><a class="member__link" href="#" title="매장 찾기">Find a
                 Store</a></li>
           </ul>
           <!-- 검색 입력 폼 + 시간 남으면 다시 해보기-->
@@ -514,7 +523,7 @@
             <h3 class="a11y-hidden">여름 시즌 md</h3>
             <a href="#" class="toggle">
               <img src="/images/20200714_badge_pc.png" alt="나만의 스타벅스 홈카페 자세히보기" />
-              <button class="md-close">창닫기</button>
+             <button class="md-close" aria-label="여름 시즌 md 창닫기"><i class="far fa-times-circle"></i></button>
             </a>
             
           </div>
