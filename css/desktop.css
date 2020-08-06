@@ -1112,6 +1112,9 @@ body {
 .rule__green {
   color: #00B050 !important;
 }
+.company__link {
+  padding: 10px 20px;
+}
 .company__addr {
   margin-bottom: 10px;
   font-style: normal;
@@ -1127,6 +1130,7 @@ body {
 .company {
   text-align: center;
 }
+
 .company-info__list,
 .rule li {
   display: inline-block;
