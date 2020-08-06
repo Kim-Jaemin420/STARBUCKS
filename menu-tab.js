@@ -24,7 +24,7 @@ tab.click(function(e){
 });
 
 // 검색 슬라이드
-jQuery( document ).ready( function() {
+$( document ).ready( function() {
   $( '.search-form__btn' ).click( function() {
     $( '.search-form' ).width( '180px' );
   } );
@@ -115,3 +115,6 @@ $(document).ready(function(){
     }
   })
 })
+
+//건너뛰기 링크 탭인덱스
+tab.attr('tabindex', '0');

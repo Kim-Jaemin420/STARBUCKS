@@ -3,9 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="블론드 서머 라떼 & 스위티 자몽, 라임 블렌디드,스위티 멜론 블렌디드"/>
-  <meta name="description" content="스타벅스 메인페이지 올 여름 시즌메뉴 블론드 서머 라떼 & 스위티 자몽, 라임 블렌디드,스위티 멜론 블렌디드를 즐겨보세요"/>
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0" />
+  <meta name="keywords" content="스타벅스,블론드 서머 라떼, 스위티 자몽, 라임 블렌디드,스위티 멜론 블렌디드"/>
+  <meta name="description" content="스타벅스 메인페이지"/>
   <meta property="og:title" content="STARBUCKS KOREA"/>
   <meta property="og:url" content="https://www.starbucks.co.kr/index.do"/>
   <meta property="og:description" content="스타벅스의 새로운 시즌메뉴들을 즐겨보세요"/>
@@ -29,7 +29,7 @@
       <header class="header clearfix">
 
         <!-- 건너뛰기 링크 -->
-        <div class="skip">
+        <div class="skip tab">
           <ul>
             <li><a href="#">메인 콘텐츠 바로가기</a></li>
           </ul>
@@ -495,7 +495,7 @@
 
       <div class="season-wrap">
         <section class="season-menu">
-          <h2 class="a11y-hidden">여름 시즌 메뉴</h2>
+          <h2 tabindex="0" class="a11y-hidden">여름 시즌 메뉴</h2>
           <div class="slogan">
             <img src="/images/20_summer3_emblem.png" alt="STAY CHILL STAY PLAYFUL." />
           </div>
@@ -517,13 +517,13 @@
             </li>
           </ul>
           <div class="summer-more link-box border--white font--white hover--green">
-            <a class="summer-more__link" href="#">자세히 보기</a>
+            <a class="summer-more__link" href="#" aria-label="여름 시즌 메뉴 자세히 보기">자세히 보기</a>
           </div>
           <div class="season-md">
-            <h3 class="a11y-hidden">여름 시즌 md</h3>
+            <h3 tabindex="0" class="a11y-hidden">여름 시즌 md</h3>
             <a href="#" class="toggle">
               <img src="/images/20200714_badge_pc.png" alt="나만의 스타벅스 홈카페 자세히보기" />
-             <button class="md-close" aria-label="여름 시즌 md 창닫기"><i class="far fa-times-circle"></i></button>
+             <button tabindex="-1" class="md-close"><i class="far fa-times-circle"></i></button>
             </a>
             
           </div>
@@ -536,7 +536,7 @@
       <div class="board-wrap">
         <section class="board">
           <div class="notice">
-            <h2 class="notice__title">공지사항</h2>
+            <h2 tabindex="0" class="notice__title">공지사항</h2>
             <ul class="notice__list">
               <li class="notice__item"><a class="notice__link" href="#">전자영수증 서비스 점검 안내</a></li>
               <li class="notice__item"><a class="notice__link" href="#">홈페이지 이용약관 개정 안내</a></li>
@@ -544,12 +544,12 @@
               <li class="notice__item"><a class="notice__link" href="#">더양평DTR점 주문 시 유의사항</a></li>
               <li class="notice__item"><a class="notice__link" href="#">시스템 개선 및 점검 안내</a></li>
             </ul>
-            <a class="notice-more clearfix"><img class="notice-more__img" src="/images/btn_notice_plus.png"
+            <a class="notice-more clearfix" href="#"><img class="notice-more__img" src="/images/btn_notice_plus.png"
                 alt="공지사항 더보기"></a>
           </div>
           <!-- 시간남으면 해볼것! 가능? -->
           <div class="promotion">
-            <h2 class="promotion__title"><a class="promotion__title__link" href="#">스타벅스 프로모션</a></h2>
+            <h2 tabindex="0" class="promotion__title"><a class="promotion__title__link" href="#">스타벅스 프로모션</a></h2>
 
             <button class="promotion-expand"><img src="/images/btn_prom_down.png" alt="프로모션 더보기"></button>
             <ul class="poster__list">
@@ -557,7 +557,7 @@
                 <figure class="promtion__poster a11y-hidden">
                   <img src="/images/nu5js2_20200713164018239.jpg" alt="시즌 음료 및 엠디" />
                 </figure>
-                <p class="poster__brief a11y-hidden">
+                <p tabindex="0" class="poster__brief a11y-hidden">
                   <em>스타벅스에서 준비한 다채로운 제상품</em>과 함께
                   <em>시원한 여름</em>을 즐겨보세요!
                   기간 : <time datetime="2020-07-14">2020년 7월 14일(화)</time>
@@ -572,7 +572,7 @@
                 <figure class="promtion__poster">
                   <img src="/images/uV703j_20200603100100394.jpg" alt="자메이카 블루 마운틴 리저브 원두와 음료" />
                 </figure>
-                <p class="poster__brief">
+                <p tabindex="0" class="poster__brief">
                   Jamaica Blue Mountain 자메이카 블루 마운틴 기간 : <time datetime="2020-06-02">2020년 6월 2일(화)</time>
                   ~ <time datetime="2020-08-31">2020년 8월 31일(월)</time>
                 </p>
@@ -603,9 +603,9 @@
       <div class="rewards-wrap">
         <section class="rewards">
           <div class="rewards-content">
-            <h2 class="rewards__title a11y-hidden">스타벅스 혜택과 선물하기</h2>
+            <h2 tabindex="0" class="rewards__title a11y-hidden">스타벅스 혜택과 선물하기</h2>
             <img class="rewards__img" src="/images/reward_logo.png" alt="스타벅스 회원 혜택" />
-            <p class="rewards-member__brief">
+            <p tabindex="0" class="rewards-member__brief">
               <span class="font-size-big">스타벅스만의 <span class="font-bold">특별한 혜택,</span> 마이 스타벅스<span
                   class="font-bold">리워드</span></span>
               <span class="ft--gray"><em class="rewards__em">스타벅스 회원이세요?</em> 로그인을 통해 나만의 리워드를 확인해 보세요.
@@ -618,7 +618,7 @@
             <div class="login link-box border--black font--black hover--black">
               <a class="login__link" href="#">로그인</a>
             </div>
-            <p class="rewards-gift__brief ft--gray">
+            <p tabindex="0" class="rewards-gift__brief ft--gray">
               회원 가입 후, 스타벅스 e-Gift Card를
               <em class="rewards__em">"나에게 선물하기"로 구매하시고, 편리하게 등록하세요!</em>
               카드를 등록하여 마이 스타벅스 리워드 회원이 되신 후,
@@ -633,12 +633,12 @@
       <!-- 원두 -->
       <div class="bean-wrap">
         <section class="bean clearfix">
-          <h2 class="bean__title a11y-hidden">르완다 블론드 로스트 시즌 원두</h2>
+          <h2 tabindex="0" class="bean__title a11y-hidden">르완다 블론드 로스트 시즌 원두</h2>
           <figure class="bean__figure">
             <img src="images/20_summer_rwanda_bean.png" alt="르완다 블론드 로스트" />
           </figure>
           <div class="bean-content">
-            <p class="bean__brief">
+            <p tabindex="0" class="bean__brief">
               <span class="bean-font">키 라임의 섬세한 산미로 시작하여 꿀과 같은 달콤함으로 마무리 되는</span>
               <span class="bean-font font-bold font-size-big">르완다 블론드 로스트</span>
               <span class="bean-brief-text">
@@ -648,7 +648,7 @@
               </span>
             </p>
             <div class="bean-more link-box border--white font--white hover-whte">
-              <a class="bean-more__link" href="#">자세히 보기</a>
+              <a class="bean-more__link" href="#" aria-label="르완다 블론드 시즌 원두 자세히 보기">자세히 보기</a>
             </div>
           </div>
         </section>
@@ -656,27 +656,28 @@
       <!-- 리서브 원두 -->
       <div class="reserve-wrap">
         <section class="reserve clearfix">
-          <h2 class="reserve__title a11y-hidden">자메이카 블루 마운틴</h2>
+          <h2 tabindex="0" class="reserve__title a11y-hidden">자메이카 블루 마운틴</h2>
           <div class="reserve-more link-box border--black font--black hover--black">
-            <a class="reserve-more__link" href="#">자세히 보기</a>
+            <a class="reserve-more__link" href="#" aria-label="자메이카 블루 마운틴 자세히보기">자세히 보기</a>
           </div>
-          <small class="caution">이미지는 연출된 것으로, 이미지 내 MD 상품은 실제 판매되지 않습니다.</small>
-          <small class="caution">해당 음료와 원두는 리저브 매장에서만 판매됩니다.</small>
+          <small tabindex="0" class="caution">이미지는 연출된 것으로, 이미지 내 MD 상품은 실제 판매되지 않습니다.</small>
+          <small tabindex="0" class="caution">해당 음료와 원두는 리저브 매장에서만 판매됩니다.</small>
         </section>
       </div>
       <div class="product-wrap">
         <section class="product">
-          <h2 class="product__title a11y-hidden">스타벅스의 다양한 메뉴</h2>
+          <h2 tabindex="0" class="product__title a11y-hidden">스타벅스의 다양한 메뉴</h2>
           <div class="product-slogan">
             <img src="/images/fav_prod_txt01.png" alt="PICK YOUR FAVORITE">
-            <p class="product-text1">
+            <p tabindex="0" class="product-text1">
               <em class="product__em">다양한 메뉴</em>를
               <em class="product__em">스타벅스</em>에서 즐겨보세요.
             </p>
-            <p class="product-text2">스타벅스만의 특별함을 경험할 수 있는 <em class="product__em">최상의 선택음료</em>
-              스타벅스 커피와 완벽한 어울림을 <em class="product__em">자랑하는 푸드</em>
-              다양한 시도와 디자인으로 <em class="product__em">가치를 더하는 상품</em>
-              소중한 사람에게 마음을 전하는 가장 좋은 방법 <em class="product__em">스타벅스 카드
+            <p class="prodspan>
+              <span tabindex="0">스타벅스만의 특별함을 경험할 수 있는 <em class="product__em">최상의 선택음료</em></span>
+              <span tabindex="0">스타벅스 커피와 완벽한 어울림을 <em class="product__em">자랑하는 푸드</em></span>
+              <span tabindex="0">다양한 시도와 디자인으로 <em class="product__em">가치를 더하는 상품</em></span>
+              <span tabindex="0">소중한 사람에게 마음을 전하는 가장 좋은 방법 <em class="product__em">스타벅스 카드</span>
               </em>
             </p>
           </div>
@@ -684,7 +685,7 @@
             <img src="/images/20_summer3_fav.png" alt="스타벅스의 다양한 메뉴">
           </figure>
           <div class="product-more link-box border--white font--white hover--black">
-            <a class="product-more__link" href="#">자세히 보기</a>
+            <a class="product-more__link" href="#" aria-label="스타벅스 다양한 메뉴 자세히 보기">자세히 보기</a>
           </div>
         </section>
       </div>
@@ -692,18 +693,18 @@
       <!-- before after로 백그라운드 이미지 삽입하기 -->
       <div class="magazine-wrap">
         <section class="magazine">
-          <h2 class="a11y-hidden">리저브 온라인 메거진</h2>
-          <p class="magazine__brief">
+          <h2 tabindex="0" class="a11y-hidden">리저브 온라인 매거진</h2>
+          <p tabindex="0" class="magazine__brief">
             <span class="a11y-hidden">리저브가 선사하는 특별한 경험을 온라인 매거진으로 만나보세요.</span>
           </p>
-          <a href="#" class="magazine__more">EXPLORE OUR STORY</a>
+          <a href="#" class="magazine__more" aria-label="온라인 매거진 더보기">EXPLORE OUR STORY</a>
         </section>
       </div>
       <!-- 매장찾기 섹션 -->
       <div class="find-wrap">
         <section class="find">
-          <h2 class="a11y-hidden">스타벅스 매장찾기</h2>
-          <p class="find__brief">
+          <h2 tabindex="0" class="a11y-hidden">스타벅스 매장찾기</h2>
+          <p tabindex="0" class="find__brief">
             <span class="bolder">스타벅스를 가까이에서 경험해보세요.</span>
             <span class="middle-size">고객님과 가장 가까이 있는 매장을 찾아보세요!</span>
             차별화된 커피 경험을 누릴 수 있는 <em class="em">리저브<sup class="sup-size">TM</sup>매장</em>
@@ -711,7 +712,7 @@
             함께해서 더 따뜻할 수 있는 지역사회 소통 공간 <em class="em">커뮤니티 매장</em>
           </p>
           <div class="find-market link-box border--black font--black hover--black">
-            <a class="find-market__link" href="#">매장 찾기</a>
+            <a class="find-market__link" href="#" aria-label="스타벅스 매장 찾기">매장 찾기</a>
           </div>
         </section>
       </div>
@@ -767,12 +768,18 @@
         </ul>
         <div class="award__wrap">
           <div class="award-list">
-            <img class="award" src="/images/footer_award17_01.jpg" alt="2016 고용창출 100대 우수기업 4년 연속 표창" />
-            <img class="award" src="/images/footer_award17_02.jpg" alt="2016 장애인고용촉진대회 장애인고용촉진 유공 포상" />
-            <img class="award" src="/images/footer_award17_03.jpg" alt="2016 그린킹 캠페인 온실가스 저감 우수 모범 기업" />
-            <img class="award" src="/images/footer_award17_04.jpg" alt="2016 농식품 상생협력 활동 우수사례 기업" />
-            <img class="award" src="/images/footer_award17_05.jpg" alt="2016 대한민국 여성인재경영대상 우수사례 기업" />
-            <img class="award" src="/images/footer_award17_06.jpg" alt="2016 한국 최고의 직장 톱 10 본상" />
+            <img class="award" src="/images/footer_award17_01.jpg" alt="고용창출 우수기업 표창" />
+            <img class="award" src="/images/footer_award17_02.jpg" alt="장애인고용촉진 유공 포상" />
+            <img class="award" src="/images/footer_award17_03.jpg" alt="온실가스 저감 우수 모범 기업" />
+            <img class="award" src="/images/footer_award17_04.jpg" alt="농식품 상생협력 활동 우수 기업" />
+            <img class="award" src="/images/footer_award17_05.jpg" alt="대한민국 여성인재경영대상 우수사례 기업" />
+            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
+            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
+            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
+            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
+            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
+            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
+            <img class="award" src="/images/footer_award17_06.jpg" alt="한국 최고의 직장 톱 10 본상" />
           </div>
         </div>
         <ul class="rule">
@@ -783,7 +790,7 @@
           <li><span aria-hidden="true" class="divider">ㅣ</span><a href="#">스타벅스 카드 이용약관</a></li>
           <li><span aria-hidden="true" class="divider">ㅣ</span><a href="#">비회원 이용약관</a></li>
           <li><span aria-hidden="true" class="divider">ㅣ</span><a href="#">경영 핫라인윤리</a></li>
-        </ul>
+        </ul> 
         <ul class="company-info">
           <li class="company-info__list">
             <div class="footer-box">

@@ -129,7 +129,9 @@ body {
 .skip{
   text-align: center;
   background-color: burlywood;
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /* 아이콘(이미지 설정) */
 .green-new::after {
